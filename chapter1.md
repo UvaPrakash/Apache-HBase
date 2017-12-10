@@ -1,3 +1,21 @@
-# First Chapter
+# Setup Development Environment
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+**Prerequisites**
+
+1. Install Eclipse
+2. Install Apache Hadoop
+3. Install Apache HBase
+4. Install Apache Zookeeper
+
+Start all the below mentioned services
+
+```
+start-dfs.sh
+start-yarn.sh
+mr-jobhistory-daemon.sh start historyserver
+service zookeeper start
+start-hbase.sh
+```
+
+![](/assets/start-all-services.png)Once all the above commands are run, check whether all the processes are running.![](/assets/jps.png)
+
