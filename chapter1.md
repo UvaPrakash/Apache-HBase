@@ -2,7 +2,7 @@
 
 **Prerequisites**
 
-1. Install Eclipse
+1. Install Eclipse IDE
 2. Install Apache Hadoop
 3. Install Apache HBase
 4. Install Apache Zookeeper
