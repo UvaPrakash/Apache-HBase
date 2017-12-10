@@ -102,3 +102,7 @@ public class CreateTable
 
 Click on Run -&gt; Run As -&gt; Java Application. Once the project runs successfully, output will be displayed as below.![](/assets/output.png)
 
+### Validating HBase table creation from HBase Shell
+
+![](/assets/hbase-shell-1.png)![](/assets/hbase-shell-2.png)
+
