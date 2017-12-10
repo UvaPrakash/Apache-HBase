@@ -19,35 +19,35 @@ Add the below dependencies to pom.xml for including hadoop-common, hadoop-mapred
 
 ```
     <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
-	<dependency>
-    	<groupId>org.apache.hadoop</groupId>
-    	<artifactId>hadoop-common</artifactId>
-    	<version>2.7.3</version>
-	</dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-common</artifactId>
+        <version>2.7.3</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-common -->
-	<dependency>
-	    <groupId>org.apache.hadoop</groupId>
-	    <artifactId>hadoop-mapreduce-client-common</artifactId>
-	    <version>2.7.3</version>
-	</dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-mapreduce-client-common</artifactId>
+        <version>2.7.3</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core -->
-	<dependency>
-	    <groupId>org.apache.hadoop</groupId>
-	    <artifactId>hadoop-mapreduce-client-core</artifactId>
-	    <version>2.7.3</version>
-	</dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-mapreduce-client-core</artifactId>
+        <version>2.7.3</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
-	<dependency>
-	    <groupId>org.apache.hbase</groupId>
-	    <artifactId>hbase-client</artifactId>
-	    <version>1.2.5</version>
-	</dependency>
+    <dependency>
+        <groupId>org.apache.hbase</groupId>
+        <artifactId>hbase-client</artifactId>
+        <version>1.2.5</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
-	<dependency>
-	    <groupId>commons-configuration</groupId>
-	    <artifactId>commons-configuration</artifactId>
-	    <version>1.10</version>
-	</dependency>
+    <dependency>
+        <groupId>commons-configuration</groupId>
+        <artifactId>commons-configuration</artifactId>
+        <version>1.10</version>
+    </dependency>
 ```
 
 Its time to code CreateTable.java.
@@ -74,31 +74,31 @@ import org.apache.hadoop.hbase.client.HBaseAdmin;
 
 public class CreateTable 
 {
-	   public static void main(String[] args) throws IOException {
-		   System.out.println("Initializing HBase Create Table");
-		   
-	      // Instantiating configuration class
-		  Configuration con = HBaseConfiguration.create();
-		  Connection connection = null;
-		  connection = ConnectionFactory.createConnection(con);
+       public static void main(String[] args) throws IOException {
+           System.out.println("Initializing HBase Create Table");
 
-	      // Instantiating HbaseAdmin class
-	      HBaseAdmin admin = (HBaseAdmin) connection.getAdmin();
+          // Instantiating configuration class
+          Configuration con = HBaseConfiguration.create();
+          Connection connection = null;
+          connection = ConnectionFactory.createConnection(con);
 
-	      // Instantiating table descriptor class
-	      HTableDescriptor tableDescriptor = new
-	      HTableDescriptor(TableName.valueOf("employee"));
+          // Instantiating HbaseAdmin class
+          HBaseAdmin admin = (HBaseAdmin) connection.getAdmin();
 
-	      // Adding column families to table descriptor
-	      tableDescriptor.addFamily(new HColumnDescriptor("personal"));
-	      tableDescriptor.addFamily(new HColumnDescriptor("professional"));
+          // Instantiating table descriptor class
+          HTableDescriptor tableDescriptor = new
+          HTableDescriptor(TableName.valueOf("employee"));
 
-	      // Execute the table through admin
-	      admin.createTable(tableDescriptor);
-	      System.out.println("Table: employee created");
-	   }
+          // Adding column families to table descriptor
+          tableDescriptor.addFamily(new HColumnDescriptor("personal"));
+          tableDescriptor.addFamily(new HColumnDescriptor("professional"));
+
+          // Execute the table through admin
+          admin.createTable(tableDescriptor);
+          System.out.println("Table: employee created");
+       }
 }
 ```
 
-
+Click on Run -&gt; Run As -&gt; Java Application. Once the project runs successfully, output will be displayed as below.![](/assets/output.png)
 
