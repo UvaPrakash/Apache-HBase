@@ -56,9 +56,8 @@ Its time to code CreateTable.java.
 package com.uva.hbase_java_samples;
 
 /**
- * Author: Uva Prakash P
- * Date: 11-Dec-2017
- *
+ * @author Uva Prakash P
+ * Dec 11, 2017
  */
 
 import java.io.IOException;

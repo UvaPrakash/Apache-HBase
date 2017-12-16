@@ -11,9 +11,8 @@
 package com.uva.hbase_java_samples;
 
 /**
- * Author: Uva Prakash P
- * Date: 16-Dec-2017
- *
+ * @author Uva Prakash P
+ * Dec 16, 2017
  */
 
 import java.io.IOException;
@@ -58,6 +57,4 @@ Click on Run -&gt; Run As -&gt; Java Application. Once the project runs successf
 ### Validating List HBase table from HBase Shell
 
 ![](/assets/list_table_hbase.png)
-
-
 
