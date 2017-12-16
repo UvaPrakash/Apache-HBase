@@ -73,33 +73,39 @@ import org.apache.hadoop.hbase.client.HBaseAdmin;
 
 public class CreateTable 
 {
-       public static void main(String[] args) throws IOException {
-           System.out.println("Initializing HBase Create Table");
+	   public static void main(String[] args) throws IOException {
+		   System.out.println("Initializing HBase Create Table");
+		   
+	      // Instantiating configuration class
+		  Configuration con = HBaseConfiguration.create();
+		  Connection connection = null;
+		  connection = ConnectionFactory.createConnection(con);
 
-          // Instantiating configuration class
-          Configuration con = HBaseConfiguration.create();
-          Connection connection = null;
-          connection = ConnectionFactory.createConnection(con);
+	      // Instantiating HbaseAdmin class
+	      HBaseAdmin admin = (HBaseAdmin) connection.getAdmin();
 
-          // Instantiating HbaseAdmin class
-          HBaseAdmin admin = (HBaseAdmin) connection.getAdmin();
+	      // Instantiating table descriptor class
+	      HTableDescriptor tableDescriptor = new
+	      HTableDescriptor(TableName.valueOf("employee"));
 
-          // Instantiating table descriptor class
-          HTableDescriptor tableDescriptor = new
-          HTableDescriptor(TableName.valueOf("employee"));
+	      // Adding column families to table descriptor
+	      tableDescriptor.addFamily(new HColumnDescriptor("personal"));
+	      tableDescriptor.addFamily(new HColumnDescriptor("professional"));
 
-          // Adding column families to table descriptor
-          tableDescriptor.addFamily(new HColumnDescriptor("personal"));
-          tableDescriptor.addFamily(new HColumnDescriptor("professional"));
-
-          // Execute the table through admin
-          admin.createTable(tableDescriptor);
-          System.out.println("Table: employee created");
-       }
+	      // Execute the table through admin
+	      admin.createTable(tableDescriptor);
+	      System.out.println("Table: employee created");
+	      
+	      // Shutting down HBase
+	      System.out.println("Shutting down HBase");
+	      admin.shutdown();
+	   }
 }
 ```
 
-Click on Run -&gt; Run As -&gt; Java Application. Once the project runs successfully, output will be displayed as below.![](/assets/output.png)
+Click on Run -&gt; Run As -&gt; Java Application. Once the project runs successfully, output will be displayed as below.
+
+![](/assets/create_table_output.png)
 
 ### Validating HBase table creation from HBase Shell
 

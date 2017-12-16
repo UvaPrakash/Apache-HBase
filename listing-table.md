@@ -45,7 +45,10 @@ public class ListTable {
       for (int i=0; i<tableDescriptor.length;i++ ){
          System.out.println(tableDescriptor[i].getNameAsString());
       }
-
+      
+      // Shutting down HBase
+      System.out.println("Shutting down HBase");
+      admin.shutdown();
    }
 }
 ```
