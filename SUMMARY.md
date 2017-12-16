@@ -8,4 +8,5 @@
 * [Enabling Table](enabling-table.md)
 * [Adding/Deleting Column Family](addingdeleting-column-family.md)
 * [Drop Table](drop-table.md)
+* [Inserting Data](inserting-data.md)
 
