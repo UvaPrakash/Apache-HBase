@@ -12,4 +12,5 @@
 * [Updating Data](updating-data.md)
 * [Reading Data](reading-data.md)
 * [Deleting Data](deleting-data.md)
+* [Scanning Data](scanning-data.md)
 
