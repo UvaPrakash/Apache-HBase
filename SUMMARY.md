@@ -7,4 +7,5 @@
 * [Disabling Table](disabling-table.md)
 * [Enabling Table](enabling-table.md)
 * [Adding/Deleting Column Family](addingdeleting-column-family.md)
+* [Drop Table](drop-table.md)
 
