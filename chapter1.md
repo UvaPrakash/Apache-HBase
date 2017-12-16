@@ -11,11 +11,13 @@ Start all the below mentioned services
 
 ```
 start-dfs.sh
-start-yarn.sh
-mr-jobhistory-daemon.sh start historyserver
 service zookeeper start
 start-hbase.sh
 ```
 
-![](/assets/start-all-services.png)Once all the above commands are run, check whether all the processes are running.![](/assets/jps.png)
+![](/assets/start_all_services.png)
+
+Once all the above commands are run, check whether all the processes are running.
+
+![](/assets/jps.png)
 
