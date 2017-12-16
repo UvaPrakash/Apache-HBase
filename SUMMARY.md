@@ -5,4 +5,5 @@
 * [Create Table](create-table.md)
 * [Listing Table](listing-table.md)
 * [Disabling Table](disabling-table.md)
+* [Enabling Table](enabling-table.md)
 
