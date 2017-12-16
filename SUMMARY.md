@@ -6,4 +6,5 @@
 * [Listing Table](listing-table.md)
 * [Disabling Table](disabling-table.md)
 * [Enabling Table](enabling-table.md)
+* [Adding/Deleting Column Family](addingdeleting-column-family.md)
 
