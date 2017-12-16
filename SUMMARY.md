@@ -10,4 +10,5 @@
 * [Drop Table](drop-table.md)
 * [Inserting Data](inserting-data.md)
 * [Updating Data](updating-data.md)
+* [Reading Data](reading-data.md)
 
