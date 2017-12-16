@@ -9,4 +9,5 @@
 * [Adding/Deleting Column Family](addingdeleting-column-family.md)
 * [Drop Table](drop-table.md)
 * [Inserting Data](inserting-data.md)
+* [Updating Data](updating-data.md)
 
