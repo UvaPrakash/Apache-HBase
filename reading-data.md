@@ -25,15 +25,15 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 public class ReadData {
    public static void main(String[] args) throws IOException, Exception{
-	  System.out.println("Initializing HBase Read Data");
+      System.out.println("Initializing HBase Read Data");
 
-	  // Instantiating Configuration class
-	  Configuration con = HBaseConfiguration.create();
-	  Connection connection = null;
-	  connection = ConnectionFactory.createConnection(con);
+      // Instantiating Configuration class
+      Configuration con = HBaseConfiguration.create();
+      Connection connection = null;
+      connection = ConnectionFactory.createConnection(con);
 
       // Instantiating HTable class
-	  HTable hTable = (HTable) connection.getTable(TableName.valueOf("employee"));
+      HTable hTable = (HTable) connection.getTable(TableName.valueOf("employee"));
 
       // Instantiating Get class
       Get g = new Get(Bytes.toBytes("row1"));
@@ -48,7 +48,7 @@ public class ReadData {
       // Printing the values
       String name = Bytes.toString(value);
       String city = Bytes.toString(value1);
-      
+
       System.out.println("Name: " + name + " City: " + city);
    }
 }
